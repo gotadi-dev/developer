@@ -1,0 +1,1299 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+    
+    
+      
+        <title>API Manage Booking - Gotadi Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#document-api-manage-booking" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gotadi Docs" class="md-header__button md-logo" aria-label="Gotadi Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gotadi Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Manage Booking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gotadi Docs" class="md-nav__button md-logo" aria-label="Gotadi Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Gotadi Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Developer Guide (VI)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Guide (VI)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide (VI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Tài liệu tích hợp B2B2C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affiliate/" class="md-nav__link">
+        Affiliate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-login/" class="md-nav__link">
+        API Login
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-login-partner/" class="md-nav__link">
+        API Login B2B2C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          API Hotel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Hotel" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          API Hotel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-hotel/api-searching/" class="md-nav__link">
+        API Searching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-hotel/api-booking/" class="md-nav__link">
+        API Booking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-hotel/api-cancellation/" class="md-nav__link">
+        API Cancellation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          API Flight
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Flight" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          API Flight
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-flight/api-searching/" class="md-nav__link">
+        API Searching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-flight/api-booking/" class="md-nav__link">
+        API Booking
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-payment/" class="md-nav__link">
+        API Payment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API Manage Booking
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API Manage Booking
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-tim-kiem-booking" class="md-nav__link">
+    1. Tìm kiếm booking
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Tìm kiếm booking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    Headers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-truy-van-ket-qua-xuat-commit-booking" class="md-nav__link">
+    2. API Truy vấn kết quả xuất commit booking
+  </a>
+  
+    <nav class="md-nav" aria-label="2. API Truy vấn kết quả xuất commit booking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_1" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_1" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_1" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_1" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_1" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_1" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_1" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Developer Guide (EN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Guide (EN)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide (EN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Agent partner
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Agent partner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Agent partner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-partner/integration-flow/" class="md-nav__link">
+        Integration flow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-tim-kiem-booking" class="md-nav__link">
+    1. Tìm kiếm booking
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Tìm kiếm booking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    Headers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameters" class="md-nav__link">
+    Parameters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-truy-van-ket-qua-xuat-commit-booking" class="md-nav__link">
+    2. API Truy vấn kết quả xuất commit booking
+  </a>
+  
+    <nav class="md-nav" aria-label="2. API Truy vấn kết quả xuất commit booking">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_1" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_1" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_1" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_1" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_1" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_1" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_1" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="document-api-manage-booking">Document API Manage Booking<a class="headerlink" href="#document-api-manage-booking" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="1-tim-kiem-booking">1. Tìm kiếm booking<a class="headerlink" href="#1-tim-kiem-booking" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">GET: /bookingsrv/api/bookings/search</p>
+<p>Tìm kiếm booking</p>
+</div>
+<h3 id="headers">Headers<a class="headerlink" href="#headers" title="Permanent link">&para;</a></h3>
+<details class="example" open="open">
+<summary>Headers</summary>
+<ul>
+<li>
+<p>Authorization (string, required)</p>
+<div class="admonition quote">
+<p>Token để xác thực người dùng</p>
+<p>VD: <code>Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiI1ZjhkMThjOThiNDgxMTFkZDQ3MTJhYmZfdGNkbEBnb3RhZGkuY29tIiwiYXV0aCI6IlJPTEVfQjJDLFJPTEVfUEFSVE5FUiIsIlgtaWJlLWQiOiIzMjU3MTM1MTcwM2U3MTc4ZmJmNTFjYzI4YzhkYTBkZDU5YTA5YWY3NTQ0NTU0YmMwMzk2YjY1ODVjNTExMjkzYmFjYTAzY2FlNmEyZTUzNGI1ODY3ODhiZWYyZjhiMjllNDQ1OTQyM2Y2MzAyMzE5M2M4NDg2NzkyMGE3M2YzNmM1YjIzOTljNzIxZWI5ZmMwZjJiMWJkZTAwZmViZjE3YWNhNjc2M2JjZjNhZDRkNWNhMTkxMmUzNWQ3MmZkZTIxMjUxMDhhZDlmNzFjZTU4ODNkN2YzN2JiNTM3NDFiNjhmYTk3NWEwZTk1YjhhZDI1MGNjM2YyZDdjNmViY2QxMmE0OTQ5MjJhMjY1MzU2NDI5YmMxN2EwYWU5ZWJiYzU2MzI5YzQ0NDk4ZDQ1YmFkOTMxZGY4ODFiOTM5MmUwOWI1ZmRmOWMzMThlY2NlZDc3MjFmMDY3NGQxNDZhZTZmMzI1YjNhMDBmM2E0YmE4YTMyNzJjMWQ1MDNhODNlZmU5YTVkOGYwNjcyMTM2ZWU3N2Q1ZTAzNDg3ZjBmMjExMWQ2YWIyMTdmMjNhZDY0MmZmNDQ0MTMzMjc3YmRhMGE3MDQzOTk3NWExMTM1ZWRmMDRmNjJiNDY3YjE3MDMyZGEyNmQzZjMyYzk3NmQzOTA0ZDI4NDUxZWVhYzBkNDcyYWU3N2RmOWFiNTFkNDhiY2EwZDEyNjA2NTRjMWQ2NzhiMmYwZjYxYWFiMGQwNWQwZjdmNmY3NTI1NDcyMDczZDQ3MjA2NWFkOWJkYmQ5NjljNjYzMDE4YTVlOTBjNzkyZTkxY2Q0ZjgyZmFiNjk3MTJmYTkyMzEyMDY1YTI1OTUzYTJhNDMzYzY3OWYzYzc1ZTI2MWUzMDI3NjAxYmYxZDUzY2NkNjUxZmY1MDBmYjYwNTgwNDg3YzIzYjRlZGI0YWJlMTI3OGQ5MTEwYjUwNzA4ODQ2MjEwMWRjZTdkYzEyODg4ZTZkZDJjZWQxNWQ4ZDczOGMwOGVhNzA1MjBlMTM1NGM4YzRkMTkwNTVhYWMzNzg4Y2QwMGEwZDdkMzQxODRkMGJmOWI4OTU1MTU0ZDg1MzBmYWU5NWFjOTM2ZmVlMzYwYjM3OGU0OTcyYjYzYWY2MGVjYzBkY2RlODY1NzFiZjRlYTE4MTkwNTRmYjkzNjU1NTlmY2NmOWYyZjRmNmJiZjkxY2ZlODhiOTI3ODMwYjU4ODZkMTBlYjUxZDAwYjkwY2JjMjFiYzdkYThkNGY2NjY0YzlhYTgxMjRlMDBmYjI4MTcyZTVkYzJlODY1YzUwZGRkMjdhMDVjZTJhMjg1NmViNjY5OWM5NWI1NmE2NzZjZDg1N2JjYWU4MjU0YTNhOTgzZGI5YTRhYTllYzM3NDE4NGEwNGY3ZmUwMDg0ZTQ0OTRiOGY3NGQ3Y2I2MWJjNzIwZWI1MDM5NTE2NzdlNmNlMjNkN2YzYTcxOGZhMTFmYzEzNTBmZTFmZTU3ZWFhNzFjMGIxNGU1OTNjZGEzYzJkNGFiMWMzZjc3MzU4MzY1NjQzYmVmN2MxNmI5Njc4ZDc5Y2NhZjU0ODgxODYyNmUyYjRhMWVkMjhlZjQ1NGNjNzllZThkNDlmOWY0ZmMxNzI0YzhkNmI4ZWE4MTc3N2E3M2NiNGE4OGEzNDhjMGNlYmNmZTNkOGQxYzBkZTQzN2NkYmI0ZTVhNGQ0Nzk3YWNmZmNjMzgxZjRlMzJmNTZkMzUzMmI5YTk3NjZiZDIxMWEzNjU5YzUwMGY0YzY5YTNkMTUyOTBlNzA2YTUzM2FhOGNkMzRhNTM5NDdmNzAxOWViZjUxMTIwNTRmMGQxZTk3MWI0NmJmMmM3YTJlM2YzYThlNjhmZmNjNjkwNmJkOTE1NGZjM2UxNTQ0MzZkMTJkNWFmMDU5MTZkMjg5ODEyMTVhMWUyMWE1Yjg4NjUxNGZjM2JhMjUyNTYwMzIzNTA4ODYzNzkzYTgyNTg1YjI5ODBhMDYxYjg4MzM1ZTlhYmZlMzYwYTgwNjI5YjhjMjY5M2MwMDRiMTllNWM3ODFlNDU4MDJlNTFhZjI3OTFjOTEzZTM4YWZiYTgyOTcwZmYzMjRjYjhkZDZiMmE1NDE4MzQyNGU1Y2QzNThiYmI5MDY1NmU3Y2VmYjhlNDBiZTM4MzAxZjM0ZDVmMmE0ZDdkZTIyODIzMjVlYmRlMDQzNTU3MzVkZTAzODA0Y2NlYjAxZjI1ZGEzZWVjYzI4ZjdhOTFkYjljNTZhZDVjYjdiN2RiZjEzYjI0ZGNkY2U4YTJkNjI3MzVmZTY3MjI2MDBjYjJiZmEwODM2NTc5ODFmMWI5MDdhZDllNjljMmVmNDQ0ZDBiNmY0NDA4ZTQ0ZDllNzYzZmRmZTBhZDQxNjFhOGJjYmJjNDI1MjBhZTYxNzFmMzYyZGZlNzY1OWEyYTJiMzBmYzY5ZjFlMDFiNjAyYzRkZGUyY2ZhOTJlNWZmY2UwNTU0NzlmOTdjMjk3OGM4MTI5YmM4MWZjOGJmMzJiYmI5OTY4YTc0NjM5ODE3YTE5YzFkMGJkYTYwMDY2Zjg4OTY4MjljN2M3YzdhMjE5NTM4YWQyZTMwMjcwNTIwOTUyOWQwNjNkMzFiYzNhYjJjMDVjOWYxYTk3OTg2YzkwOWNlZjNlOTgxMWMxNzY1ODRlMjcwM2YxMTdlMmI3ZjY5ZTQ3MjY0ZGQ0YTA3NjJmYzI2YTQ2NzUzYWM0OGE3YTdiNzhlOTM3ZDBjMjMxMWNiZTFhYzljMTNiZTE5OGI4NmJhNzU3MzY4ZDZhOWZkNjAxMWQ5NjRjYTMyNGQ1NjM1MzA3N2JlYWNjOTg0MTVmNzIzNmNjMjA3OTRiNDhlMjQwMmQ0ZjJiMDI4MDk5ODM1Y2E5YWM4MjE4MmY5YzVhYWVkZWVjZWRiMTlmOTM1NzMxZmE4Y2M5MzFhYzBhZmZhMTQzMTBhN2E1OTBmNDlmMmYwZTZiMTgyODljMGJjMzI5YjAzNGQxOGU5N2U1NDlmNzM4YjY4MzhmOTk0YzI4ZmIwY2UyMjJmYzY3OGFjY2IyYzAwMmE3MzJmYTY5MmFiOWUxYjRjZDE5NzdmMDgxMzY3Y2I0NWQ5MTliODAyMjU3NDliZGM0OWQ1NDFkMjkwNDllNTU5MGFiMzlmYTE4ZTlkMjZlNDM5MWEyNGE5ZmRhNmM2OWI0ZmM3ZDUzM2VhNTQzNTJlMzVjOTQyMGJiZGYwMDg0NjY5MWIyYmY0ZmI0ZDA1ZTA3MGIxYjU2MjMzYjg5NDJkMDg4NWU3YjJjYzkzOTc4YmZiYTE4ZDM1NDlmZGJiNWUxNzdlNDY0NjY1NWViMWI4OWM4NDFlOWU3MTFjOTdkYjI1MTE4ZWUyNThkZTg4YjNlNTAzYjFmMWQ3Y2EyY2Q0YzY3MzRmOGJiY2Q5ZmY2NDc0YzM4MDljNjg4NzJhMjg0MjMwN2EzZmFlMjE0N2RmOThjMmJlOTliZDE0ZmE5N2I3Y2EyMzhmYjE5NjVlNzI2ZGI4MDdhMzJkNGVjOGU1ZjI1OGQ0Zjg5ZjhjYjY3N2ZjZWQ4OGRhZTA5OTM5MjdmOGM1YThmZjEzOWI4ZGViNTMwMTk0ODM5MWJlM2E2OWI0YjI3NmI5OWQ1N2U1NjU2YjY1MjYxMDM3NmQxZTBhZjBlNTRjNTg3OGE0ZGJhMjE5OWNjYzU4M2E1MDRkNDdlNzI2OTAyMTQxMzRjYWUyZDg2N2U3ZTRkYTFmNzgzMzg5OTA4NDhhZDE3YzU0MDEyOWFkNjViN2Y3NTY5YWRhMmMyMDNlMWMzZTIwNGExOWY3OTc1ZWI1NGQxNmNlMTRkMDMxNTI3ZjkwYmZjNTdiNWNhYzUxYmUxNjA2NGVmODNkYWEwNDgwNjllOThkMjM5NGFkZWNlMjAwNmVkZTEwMzkwZmFhNDcwZmViM2Y5NTc0ZjA3MTVkYmJhN2ZjNzY2NGUyYTdmZTBjMjJmYWNkOTRiMDFiYWYyYzEyNTEwMmFiNmY5YTEwM2QzNzRmZmFkYTUzYWJhZmE2Zjc5NTcwZGZmMTNhYjBiOTE1ZmIwZjFmYjBlMWJjMjY5N2I0ZjUxNjczMjdiMzc1OGQzNGRmYzI3ZDZlZGIwZWU5OTFhYjJmMmUyNGJkYWUxZWNlMTgxMTMwMjgwNjliNTNhMDM5MDcyNzg3YmRkNDdmNjVhNTQ3MDc3NjVhMmI5NDJiNjJlYWQ2MTgwMGQxNTQ3M2FjZmFmYmE2MTZjZWQwOWFlZmE5ZjZkODY5MGZkNDgyMWY5OGIzYjM3YjJlZTE5MjY1NTZlMWZjMGYyNjE2NDllNzMyNWYwNDFkZTNhOTkwYmE1N2ZiZjFjZWJkYjE3ZWNkZmFhZDUxYjk2ZGE4YzllOTcwNzQyYmM4YTFkZjJhMzk3ZmQwMzQyMDhkOTJhZWVjNGIzNWRlZjVmMzEzMGU1ZTU1MzNjZGJlMDk2YzgwZDY0YzA1ZDYyNjQ4YzJmYjRlMjgzZjNhM2VmNjg4YjAyMjFlNDY4OGZkYTg3Yzc5YWI0YzVjZTc5Y2RiYzgxODNmMzE4Y2E3MGQyZDJkOGY5ODQ2MmU2MmMwYTQ5NjE5Zjc4MGU0OTI1ZjYwZGRkZjVhZDNlNDkxZmMzZTM4YTk5MTMzMmY4ODBlYjA0N2E1ODJkNDc1MjgxMDAyMzUxZTE1OTAzNDRiM2VhMzJiNjQ3NjFiMjQ3OWU0NGRmYTUyNjUxNzMzZDNiYmNjOTYwOTQ2ZDQyNGM4ZjkxMmQ1OWVlMzEzMTUwODQ4OGY2ODY2MWQ4YTM2ZmNjZDllOGIxNjAzNjg1NzNkNmFlMGE0NWZhOWQwNzczNGI3ZjllNmRiYzRhYjJhZGEyYWQ1YmJmOGFjNDMwNDc3YjcwZTE2MDAxNmZiNmQ1NGRjZTc2NTQ1NDExNDIxODc4OTlkNThhMDk0YzE1M2I4ZGVkMGIzNjhjYTBmYjg5NjdlZjJiZDlhZjIyMTJhODI2MGI4ZDRiYzBhYzBjYjliZjAyMTExYjZhNjQyNDg3MzlmZWU3Y2EyMzUxYzRkZmYwMjc0N2FkNzhlZTg5NTMxODZlMTZiNTJlZDQxNDI3NjJjN2Y4NzZmMmRlMzk1ZjI2OGViYjM2ZjM0NTI3NjgyMzA5OWYwYmFlYjhkNDYwOTE2MWUyODNkYmMxZWNjNTU0NmU3ZTJlYjMyZjUxOTUzNDFhMjE0ZmYwZDMzNmE4Mjc5ZWI1NDZiMmZmNGM3YjY0MWZiNWU4ZGFhMjZkMmFhYzEyYTc2YzI1M2I4Y2JmZWU0MmRlY2Q3NWM5ZDYyYjI2ZTVkNTY1ZDRhNWQwNDQ5YjA5NTA2OTkxNWU5M2U5N2JhOWQ4N2VmZTVjMzRjNWY3NjhmMTM0YmVjMjBlOTY0MjE5YmUxMDg4MGE2NDA2Y2RhM2FkMDRmM2IyMjRhMmJmMDY2YjI3NWY0MWI5YTM0OGI1MjAzZWUyYjM4Y2EzOGZiMjk0ZGQzZTZkZDJiYzIxN2E0NTA3YzllMzhkMzZkYzcwM2I1YjlkNzE3ZGM3NDM4MGRmNzYzY2E2ZGRkOWIxODliMGIyODY4ZDgyYmMyMmQwMGNlYjc4ODE1Mzg4ZTFlMjE2ZmVjZDUzMDIyMTU0MWVhY2Y1NmI1ZjJlMzU5ODMyZjY4YzBiMGE3Mzg2YTJhZDY4YWM1YTE3NGJjM2ZlZTcxMzk4OGM1YTdlOTkyODYyNDAwNTdmOThiOTg1ZmY4NmRjN2NkOTM5MjgyYjM4YjNkOGZkZDQyYTRlNmYxZDI4NGIyNDE2MjQxNGVjMTEwMTU4YjM2NmNiYmY3NmE2NTZhZjNkODc3ODVjNmY1MTk5ZDM4ZjA0NTA5MGQxZmU1NDliNmRiMmQ0NmMzNDE5NWI0ZWQ4OTg3NTMyOTljNmM5MjRkMDdlMGIwNDY1ODI0YTE5NjBiNWVhNTc1ODM4NDg5MDkzMDI4NmM3Y2M5NzE3YjUyMGE4YzQxZDY4ZTc2NzQ4OTMwMjI1MjYxMTNjNWI3Y2E4Njg2M2E3ODgwMmExOGQzODIxMjc3YTU1YzAwN2M5MTE1ZjFjM2RmYWNkZDhiYmI5YzczYmFkYWMyMTkwZGZlMmMyZTViNGJmM2JhOWFhZWJlODhiYTg0ZDlkMmI5MWU3YzRmYzk4OWYzMmVlOWU4OTViOTM5ZWY0NTRkZjEyMmFmZWMyYjg0YmQ5OGU3YzdmZWVkNjdhMTE0OTM3MzljZmE2MjY4MDNjNjFlMWUwNWI5OTNhNTE3ODNhN2IwYjA5YTQ4ZWRjMzg0Yjg5ZTE1NzMwZTE4ZjdmZmYyNDIyOTdiMWI3MWQxYzk4MzI2ZGRmOTllNzQwMjVjMmQwMGIzNWVkMDQzZDg4MTgyNWMyZjgxMmE4NTg0YTM5MTkzN2UxMWRiZDQwOTJlMDBmMDAxOGRjMzFhOTkxM2Y0M2Q0MTU5MTEzYmQ4ZTliZTZhNzJkZTE5MTE1YjAzNmI4ODZmODUxYTYwNTlhY2E4NWU5NGMxMjFkODQyMzA1ZjkyOTljMWQxYjk1MjJmZDJmODE1ZDE0MTc3YTg4NWNkMDJjZDc4OGFlYWJlYjViMmIwZmQwYTZkZGJmZWNiYWRiYjI1NDQzYjk4MDllZWFmMzc3MmVkYTNmN2I2MDQ0MTA2OGE4ZmVhMTM1OWRmNWI2YWIzYTcxNjcyZTAwNDQxMWYxMzA4ZDMwODFmNzAzMTE2MThlNTU1YTUxZWIxYjY5Y2ViNmQzNzFjMDY1YjhmNDEyNWM1NmIyYTA5NjRmOGExOGU4NmM0ZWFmYzA1OThkYWNjZmI1N2YyMDAzMGE1ZjFiNmVhNGFmZjE5MGY4ZTIxZDg2Mjg1ODA4Y2FkOTI1NmE1YTY0ZmEwYjEwMzk4MjY1ZDM3NDUyMGFhMTM5MDQwZThlMTVlZjUxNjZhNDQ2NTJhMDQzZTU5MThmMWE4M2NhODY4MDg0OTQzY2ZjNWFmYTk4ZTg0OTc0NjljNjVmYjM3MjlhMTgzY2I1MGIyYzc3NDYwZjJjNGViNjY0YmIyM2NjMzZlZmYyOGY5MjNjNGQ0MzA0OGIxMTViZDA3ODllYmNiZTFlNDEzMGNmNWFiZTRhNzM0NTQyZDU3ZDE0ZjUzM2RlNjFhYTI2MDBiODgzMTA1Yzk4MjBjNGI4ZGVlOGMwNTJjNDU0NTdmMDU4ZGY3Y2Q4MTc0ZmNiOGI4NTZlMWZhOWZkNWRjMzU0NjE2NDQ3ZWY5ZjFkN2Y5YjlmMjQ0NzA2MzdiNzM3YTJiOGE4ZThhYjk5YzEwZWU5OTc2ZGMzYmQ1NTZhOTBiMmQzYTNjMGU3OWJlOGFhYWQ4MTIxODU3N2VjNzM5NDBhYWY2YzA3NmI4OGQzNWY4MjNjNzYyYTZiZGJkZDJkOGI2MWViMjAzODE3MmY5NmQyZmI4YzQzZTEyMGE0NjU0MmMwODVlOTNjYzMyMTlhNmRhOTdmMjVkOWU5YjBjZjc1NWFhNDFiOWVjNzk2NTFiYTcyYTkzNTg1MzlhNDlmMmRhYjU5MTA1NDdmN2NhMGQ2ZDc0YWE4YjhkNzg2OGYwOWRkNmE0ZDQ1NTZkODc2NDI0ODA0Yzg2ZWMyMWFhMDM0ODVhZmY1YzQ2ZjRiMWY2YmU4Nzk4YTk3NTBmMGRhZGE1MzkwMzI0ZTE3N2RmM2Y1M2NhMzg5YTlkZWQ3MTVkNzlmNzRmNzIyOTU2NjcwZTAwOGFhZTMwMjUzN2E5YWY0ODZlZTgzZDM1ZmQ3NWZkYzQ5ZDcwMzI1OGUzYzNmZWFlNjU1YzMzYmMzZjIwN2EzNWM5NzQzYjlmYTA5NjlmNGUxNDVjMDNjZmNlNWE0Mzk3ZGMyNmJiYWE2N2E0NTNlY2M4MGNhY2IzNjFkYWQwMWVhNzAzMDdiNzNjMWQ4OWEwNTg4ZjFlZjU1MWIzODc1NzQ1MTUzYTFhZmM3YTU0ZDgzMzk4ZGZjODY4NGE2ZjM5MzY1ZTZlM2Q3ZjYwMzdmODEyNDAxYTMyMjFlN2VhMzc1NzdjNzJiMGU0YmI0MmUxYmY1MWFmNjFhZDZjNDFjOWI2YmVkMTk1MTE5ODFkNjhmYThkNzI4MTFkNzJmYjAwOTkyZWVmMWRkNDE3ODRmN2VmMTYxZjczNTU4YTA4MWJjNGU4YjVmYmRlNjZiMzY4YjY3YzNiNDczNjc5ZTQ5NWY2YWZjNzdiY2NiYmQ5NTViNzFjMGNiMzJkODlmNDg4NWQ2N2U2NDZiZGFhNTM0ZTA1YjZjY2I5ZDI3ZDE2MGE5ODc2NTc1MjhiYzZkMzU3MDVlZGU2NDkxYWM1OTZlYjllMTgwOTJjYThkNThjMWFmN2Q2ZTA3NzRlMzUwNmZiNGI3MmJlNTI5OTkzZmJkNzU1YWRhMGZiNWY5ZGFhMWY5MTgzYWYxMzM4YmE3ODM5NjM4MWNiYjNmNmYxYWU5ZTA5YjY2OGM0NThiMDk1MmE1MDE5NDQ5OGE2NzcyYzIzMDZmYjM5MDU1OTE0ZGYwMTNlNmRkNGMwMmEyNzIyNTI0NzEzYmZiYjZmMzM0NjYzOTFmOTc5YTA3YzVhNzY2MDk2MmRmMTIyMWNhZTQxZDNmYjEwOGY0NzRmNDA1NDU2NmMwMDU4YzhlMDA4ZjNjZjcwMjQxMmY5ZjZjYThlN2RiZjllZjY4MTgxMTZiYzdjYTIzMWRiZDE2ODAzN2ViZDZiNDgwYzI4MDllYTkwY2I5YzMzYmM3NDA3YWJhZWU1YTk4NjQ0M2MxNzc4ZDEyMjZjODU1MGUwYmU5YzE4MmIyYjNkZjU5ZTgxNzE5MDI0M2ZmZWJhZTU0NzIxNjg2YTBiMzI4NDAzMDI1ZTk4NmJlM2ZlYWZlYmE2YzhhNDQxNmNhNDgxMzVmODQ1OTlmNmQxOThlYWI1MmFhMjdiZWMzNmU4YWYyMTMzOWRiMWNmZjY4ZDY4ZDg4MzM2OGY1MTcyYzY3OTRhMzFiMmE5ODdiNDYxMWMyOTEwZmY1OTVlOGQ2NTIzYzQxZTg1OWZjMGRjMzI3NWNlNmVlNjUyMjNkNTkyOTQ5ODcxZTI3NTA3MjhkZWM0NjcwZGEyZWEwZWQ5YTY2ZDM3MmQxNmE2MzdhZjU4NmM2MjBkNjNlZjkyZGQyMGY1N2UzMmM2Zjg0NWZmNGMzZTRkZTU5ZjM0ODVmYWM2NzlmYzZkY2VjMzJkMzRhNTg2ZjlhNGE3MWRhYzc2ZWQ4MDUxNTFhZDQ2OTY1YzljNDUyY2FlMmI1ZWEzMTQ0NjllOTAwYWZmOGJjZmFlODc4MGQ3OTUwNDBlYTNhMzAyZTBjYzgzOTAxZjU3OGJlODlkYzdiYjE2M2Y4NGYxOGU0M2JmMjY0ZGI3MjUzNDY3M2RhZTAyMTljYjNkYTY1NGRlODI4MTRhMjQzZWYxYTI4ZjQ5ZDhhMzU2OGE3Njg4OWYwZDc2NzdkNGYxY2Y0YjcyMThlYjA5MTQ4MGQyYTRiYzNlZDFhY2EwYTBjYmZhNjdjNWJjYWNmMTgyNjM0ODM5ZDFkOGZmYTViNzgwYjBhNjc4MTdlNDM3MzhmMzlmNWM0MThmZTdmYTc1NTQ2ODg4NWVjZjY5YThlOGUyOGQzMDk3OTUzNjZjNWFiNGYzZGJhYmFhMmZlNTI5YjQ1MzJiMjZiMGY5MWFhNzdkZjBkM2E2NmYwMTM1ZmU5ODNhMGE5YmZlOWUwMTdjNWJkZTg0ZTFhYTMyYTkiLCJYLWliZS1rIjoiZGE1NDA1MWNmZjI0ZWFjMCIsImV4cCI6MTY0NTI0NDU3Nn0.44O8keCfnY_3qQVLZ9Np5FQFUZsVO9rj1GQ9eQIP95XGfb4nUS5RktE6uBOsxmt8BB1-sKnJEtVEv9lAIaW7AQ</code></p>
+</div>
+</li>
+</ul>
+</details>
+<h3 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<details class="example" open="open">
+<summary>Parameters</summary>
+<ul>
+<li>
+<p>bookingCode <code>query</code> (string, optional),</p>
+<div class="admonition quote">
+<p>Mã tham chiếu đến booking</p>
+</div>
+</li>
+<li>
+<p>supplierType <code>query</code> (string, required),</p>
+<div class="admonition quote">
+<p>Loại nhà cung cấp <code>AIR</code>, <code>HOTEL</code>, &hellip;</p>
+</div>
+</li>
+<li>
+<p>listBookingStatus <code>query</code> (string[], optional),</p>
+<div class="admonition quote">
+<p>Trạng thái booking. Các trạng thái booking: <code>PENDING</code>, <code>BOOKED</code>, <code>TICKET_ON_PROCESS</code>, <code>CONFIRMED</code>, <code>FAILED</code>, <code>EXPIRED</code></p>
+</div>
+</li>
+<li>
+<p>fromLocationName <code>query</code> (string, optional),</p>
+<div class="admonition quote">
+<p>Điểm đi</p>
+</div>
+</li>
+<li>
+<p>toLocationName <code>query</code> (string, optional),</p>
+<div class="admonition quote">
+<p>Điểm đến</p>
+</div>
+</li>
+<li>
+<p>fromDate <code>query</code> (string, optional),</p>
+<div class="admonition quote">
+<p>Tìm các booking có bookingDate lớn hơn hoặc bằng fromDate. Format <code>yyyy-MM-dd</code></p>
+</div>
+</li>
+<li>
+<p>toDate <code>query</code> (string, optional),</p>
+<div class="admonition quote">
+<p>Tìm các booking có bookingDate nhỏ hơn hoặc bằng toDate. Format <code>yyyy-MM-dd</code></p>
+</div>
+</li>
+</ul>
+</details>
+<h3 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
+<h4 id="code-200">Code 200<a class="headerlink" href="#code-200" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>result (Array[BookingDTO], optional),</li>
+<li>duration (integer, optional),</li>
+<li>errors (Array[Error], optional),</li>
+<li>infos (Array[Info], optional),</li>
+<li>success (boolean, optional),</li>
+<li>textMessage (string, optional)</li>
+<li>page (Array[pageDTO], optional)</li>
+</ul>
+</details>
+</div>
+</div>
+<h4 id="code-400">Code 400<a class="headerlink" href="#code-400" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request</p>
+</blockquote>
+<h4 id="code-401">Code 401<a class="headerlink" href="#code-401" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403">Code 403<a class="headerlink" href="#code-403" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404">Code 404<a class="headerlink" href="#code-404" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500">Code 500<a class="headerlink" href="#code-500" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503">Code 503<a class="headerlink" href="#code-503" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+<hr />
+<h2 id="2-api-truy-van-ket-qua-xuat-commit-booking">2. API Truy vấn kết quả xuất commit booking<a class="headerlink" href="#2-api-truy-van-ket-qua-xuat-commit-booking" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">POST: /api/partner/query-trans</p>
+<p>Truy vấn kết quả xuất commit booking</p>
+<div class="admonition note">
+<p class="admonition-title">Chú ý</p>
+<p>Yêu cầu bảo mật: Mã hóa dữ liệu và kèm theo chữ ký điện tử</p>
+</div>
+</div>
+<h3 id="request-body">Request Body<a class="headerlink" href="#request-body" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>key (string, required),</p>
+<div class="admonition quote">
+<p>Key giải mã dữ liệu (đã được mã hóa). Cách giải mã tham khảo mục: <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Mã hóa dữ liệu truyền và xác thực chữ ký điện tử</a></p>
+</div>
+</li>
+<li>
+<p>data (string, required),</p>
+<div class="admonition quote">
+<p>Dữ liệu kèm theo chữ ký điện tử (đã được mã hóa). Cách giải mã tham khảo mục: <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Mã hóa dữ liệu truyền và xác thực chữ ký điện tử</a></p>
+<p><em>Signature data schema:</em></p>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;
+</code></pre></div>
+<p><em>Original data schema:</em>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;signature&gt;
+</code></pre></div></p>
+<ul>
+<li>
+<p>access_code (String, required)</p>
+<div class="admonition quote">
+<p>Access code do Gotadi cung cấp cho Đối tác.</p>
+</div>
+</li>
+<li>
+<p>booking_number (String, required)</p>
+<div class="admonition quote">
+<p>Mã dùng tham chiếu đến booking</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="response_1">Response<a class="headerlink" href="#response_1" title="Permanent link">&para;</a></h3>
+<h4 id="code-200_1">Code 200<a class="headerlink" href="#code-200_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>key (String, required)</p>
+<div class="admonition quote">
+<p>Key giải mã dữ liệu (đã được mã hóa). Cách giải mã tham khảo mục: <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Mã hóa dữ liệu truyền và xác thực chữ ký điện tử</a></p>
+</div>
+</li>
+<li>
+<p>data (String, required)</p>
+<div class="admonition quote">
+<p>Dữ liệu kèm theo chữ ký điện tử (đã được mã hóa). Cách giải mã tham khảo mục: <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Mã hóa dữ liệu truyền và xác thực chữ ký điện tử</a></p>
+<p><em>Signature data schema:</em></p>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;error_code&gt;|&lt;product_type&gt;|&lt;properties&gt;|&lt;return_url&gt;|&lt;total_amount&gt;
+</code></pre></div>
+<p><em>Original data schema:</em>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;error_code&gt;|&lt;product_type&gt;|&lt;properties&gt;|&lt;return_url&gt;|&lt;signature&gt;|&lt;total_amount&gt;
+</code></pre></div></p>
+<ul>
+<li>
+<p>access_code (String, required)</p>
+<div class="admonition quote">
+<p>Access code do Gotadi cung cấp cho Đối tác.</p>
+</div>
+</li>
+<li>
+<p>booking_number (String, required)</p>
+<div class="admonition quote">
+<p>Mã dùng tham chiếu đến booking</p>
+</div>
+</li>
+<li>
+<p>error_code (String, required)</p>
+<div class="admonition quote">
+<p><a href="/dev-guide/#7-ma-loi">Mã lỗi</a></p>
+</div>
+</li>
+<li>
+<p>product_type (String, optional)</p>
+<div class="admonition quote">
+<p>Loại sản phẩm, có giá trị là <code>AIR</code> hoặc <code>HOTEL</code> tương ứng với loại sản phẩm được mua</p>
+</div>
+</li>
+<li>
+<p>properties (String, optional)</p>
+<div class="admonition quote">
+<p>Các thông tin mở rộng trả về cho đối tác. <code>Json string</code></p>
+</div>
+</li>
+<li>
+<p>return_url (String, optional)</p>
+<div class="admonition quote">
+<p>Trang hiển thị kết quả giao dịch của Gotadi. Sử dụng trong trường hợp đối tác không tự xây dựng trang hiển thị kết quả cuối cùng.</p>
+</div>
+</li>
+<li>
+<p>total_amount (Double, required)</p>
+<div class="admonition quote">
+<p>Tổng số tiền phải thanh toán.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+</div>
+</div>
+<h4 id="code-400_1">Code 400<a class="headerlink" href="#code-400_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request</p>
+</blockquote>
+<h4 id="code-401_1">Code 401<a class="headerlink" href="#code-401_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403_1">Code 403<a class="headerlink" href="#code-403_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404_1">Code 404<a class="headerlink" href="#code-404_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500_1">Code 500<a class="headerlink" href="#code-500_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503_1">Code 503<a class="headerlink" href="#code-503_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../api-payment/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API Payment" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              API Payment
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../agent-partner/integration-flow/" class="md-footer__link md-footer__link--next" aria-label="Next: Integration flow" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Integration flow
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      
+    
+  </body>
+</html>

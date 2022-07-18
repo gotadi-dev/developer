@@ -1,0 +1,1939 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+    
+    
+      
+        <title>API Cancellation - Gotadi Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e411adfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#document-hotel-api-cancellation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Gotadi Docs" class="md-header__button md-logo" aria-label="Gotadi Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gotadi Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Cancellation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Gotadi Docs" class="md-nav__button md-logo" aria-label="Gotadi Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Gotadi Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Developer Guide (VI)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Guide (VI)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide (VI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        Tài liệu tích hợp B2B2C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../affiliate/" class="md-nav__link">
+        Affiliate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-login/" class="md-nav__link">
+        API Login
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-login-partner/" class="md-nav__link">
+        API Login B2B2C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          API Hotel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Hotel" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          API Hotel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-searching/" class="md-nav__link">
+        API Searching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-booking/" class="md-nav__link">
+        API Booking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API Cancellation
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API Cancellation
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mo-ta-hinh-thuc-phat-khi-huy" class="md-nav__link">
+    Mô tả hình thức phạt khi huỷ
+  </a>
+  
+    <nav class="md-nav" aria-label="Mô tả hình thức phạt khi huỷ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cac-hinh-thuc-phat" class="md-nav__link">
+    Các hình thức phạt
+  </a>
+  
+    <nav class="md-nav" aria-label="Các hình thức phạt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-1-phat-theo-em" class="md-nav__link">
+    Ví dụ 1: Phạt theo đêm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-2-phat-theo-gia-tien" class="md-nav__link">
+    Ví dụ 2: Phạt theo giá tiền
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-3-phat-theo-phan-tram" class="md-nav__link">
+    Ví dụ 3: Phạt theo phần trăm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-4-nhieu-hinh-phat" class="md-nav__link">
+    Ví dụ 4: Nhiều hình phạt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-5-nhieu-hinh-phat" class="md-nav__link">
+    Ví dụ 5: Nhiều hình phạt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-6-huy-mien-phi" class="md-nav__link">
+    Ví dụ 6: Hủy miễn phí
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-api-kiem-tra-kha-nang-huy-phong-va-phi-phat" class="md-nav__link">
+    1. API Kiểm tra khả năng huỷ phòng và phí phạt
+  </a>
+  
+    <nav class="md-nav" aria-label="1. API Kiểm tra khả năng huỷ phòng và phí phạt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-yeu-cau-huy-booking-hotel" class="md-nav__link">
+    2. API yêu cầu huỷ booking hotel
+  </a>
+  
+    <nav class="md-nav" aria-label="2. API yêu cầu huỷ booking hotel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_1" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_1" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_1" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_1" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_1" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_1" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_1" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api-kiem-tra-trang-thai-huy-phong" class="md-nav__link">
+    3. API Kiểm tra trạng thái huỷ phòng
+  </a>
+  
+    <nav class="md-nav" aria-label="3. API Kiểm tra trạng thái huỷ phòng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_2" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_2" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_2" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_2" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_2" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_2" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_2" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_2" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          API Flight
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Flight" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          API Flight
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-flight/api-searching/" class="md-nav__link">
+        API Searching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-flight/api-booking/" class="md-nav__link">
+        API Booking
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-payment/" class="md-nav__link">
+        API Payment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../api-manage-booking/" class="md-nav__link">
+        API Manage Booking
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Developer Guide (EN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Guide (EN)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide (EN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Agent partner
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Agent partner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Agent partner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../agent-partner/integration-flow/" class="md-nav__link">
+        Integration flow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mo-ta-hinh-thuc-phat-khi-huy" class="md-nav__link">
+    Mô tả hình thức phạt khi huỷ
+  </a>
+  
+    <nav class="md-nav" aria-label="Mô tả hình thức phạt khi huỷ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cac-hinh-thuc-phat" class="md-nav__link">
+    Các hình thức phạt
+  </a>
+  
+    <nav class="md-nav" aria-label="Các hình thức phạt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-1-phat-theo-em" class="md-nav__link">
+    Ví dụ 1: Phạt theo đêm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-2-phat-theo-gia-tien" class="md-nav__link">
+    Ví dụ 2: Phạt theo giá tiền
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-3-phat-theo-phan-tram" class="md-nav__link">
+    Ví dụ 3: Phạt theo phần trăm
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-4-nhieu-hinh-phat" class="md-nav__link">
+    Ví dụ 4: Nhiều hình phạt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-5-nhieu-hinh-phat" class="md-nav__link">
+    Ví dụ 5: Nhiều hình phạt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vi-du-6-huy-mien-phi" class="md-nav__link">
+    Ví dụ 6: Hủy miễn phí
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-api-kiem-tra-kha-nang-huy-phong-va-phi-phat" class="md-nav__link">
+    1. API Kiểm tra khả năng huỷ phòng và phí phạt
+  </a>
+  
+    <nav class="md-nav" aria-label="1. API Kiểm tra khả năng huỷ phòng và phí phạt">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-yeu-cau-huy-booking-hotel" class="md-nav__link">
+    2. API yêu cầu huỷ booking hotel
+  </a>
+  
+    <nav class="md-nav" aria-label="2. API yêu cầu huỷ booking hotel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_1" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_1" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_1" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_1" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_1" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_1" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_1" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api-kiem-tra-trang-thai-huy-phong" class="md-nav__link">
+    3. API Kiểm tra trạng thái huỷ phòng
+  </a>
+  
+    <nav class="md-nav" aria-label="3. API Kiểm tra trạng thái huỷ phòng">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_2" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_2" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_2" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_2" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_2" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_2" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_2" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_2" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="document-hotel-api-cancellation">Document Hotel API Cancellation<a class="headerlink" href="#document-hotel-api-cancellation" title="Permanent link">&para;</a></h1>
+<p><img alt="Luồng huỷ phòng khách sạn" src="../../../img/cancellation-process.png" /></p>
+<h2 id="mo-ta-hinh-thuc-phat-khi-huy">Mô tả hình thức phạt khi huỷ<a class="headerlink" href="#mo-ta-hinh-thuc-phat-khi-huy" title="Permanent link">&para;</a></h2>
+<p>Nếu không nhận phòng, hoặc nếu hủy hay thay đổi đặt phòng này sau thời gian nhận phòng, thì bạn có thể phải chịu phí phạt lên đến <code>100%</code> giá trị đặt phòng.</p>
+<h3 id="cac-hinh-thuc-phat">Các hình thức phạt<a class="headerlink" href="#cac-hinh-thuc-phat" title="Permanent link">&para;</a></h3>
+<h4 id="vi-du-1-phat-theo-em">Ví dụ 1: Phạt theo đêm<a class="headerlink" href="#vi-du-1-phat-theo-em" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">[{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-12T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-13T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NIGHTS&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VND&quot;</span><span class="p">,</span><span class="w">  </span>
+<span class="w">    </span><span class="nt">&quot;percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w">  </span>
+<span class="w">    </span><span class="nt">&quot;nights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="p">}]</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>
+<p>Được hủy miễn phí đến trước ngày <code>2021-05-12T18:00:00.000+07:00</code>  </p>
+</li>
+<li>
+<p>Phạt <code>1</code> đêm khi hủy phòng từ ngày <code>2021-05-12T18:00:00.000+07:00</code> đến ngày <code>2021-05-13T18:00:00.000+07:00</code>  </p>
+</li>
+</ul>
+<h4 id="vi-du-2-phat-theo-gia-tien">Ví dụ 2: Phạt theo giá tiền<a class="headerlink" href="#vi-du-2-phat-theo-gia-tien" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">[{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-12T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-13T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AMOUNT&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VND&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;nights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;200000&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="p">}]</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>
+<p>Được hủy miễn phí đến trước ngày <code>2021-05-12T18:00:00.000+07:00</code>  </p>
+</li>
+<li>
+<p>Bị Phạt <code>200000</code> <code>VND</code> khi hủy phòng từ ngày <code>2021-05-12T18:00:00.000+07:00</code> đến ngày <code>2021-05-13T18:00:00.000+07:00</code>  </p>
+</li>
+</ul>
+<h4 id="vi-du-3-phat-theo-phan-tram">Ví dụ 3: Phạt theo phần trăm<a class="headerlink" href="#vi-du-3-phat-theo-phan-tram" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">[{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-12T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-13T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PERCENT&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VND&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;70%&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;nights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="p">}]</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>
+<p>Được hủy miễn phí đến trước ngày <code>2021-05-12T18:00:00.000+07:00</code>  </p>
+</li>
+<li>
+<p>Bị Phạt <code>70%</code> giá trị của phòng khi hủy phòng từ ngày <code>2021-05-12T18:00:00.000+07:00</code> đến ngày <code>2021-05-13T18:00:00.000+07:00</code>  </p>
+</li>
+</ul>
+<h4 id="vi-du-4-nhieu-hinh-phat">Ví dụ 4: Nhiều hình phạt<a class="headerlink" href="#vi-du-4-nhieu-hinh-phat" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">[{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-10T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-12T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PERCENT&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VND&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;50%&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;nights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="p">},</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-12T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-13T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PERCENT&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VND&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;70%&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;nights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="p">}]</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>
+<p>Được hủy miễn phí đến trước ngày <code>2021-05-10T18:00:00.000+07:00</code>  </p>
+</li>
+<li>
+<p>Bị Phạt <code>50%</code> giá trị của phòng khi hủy phòng từ ngày <code>2021-05-10T18:00:00.000+07:00</code> đến ngày <code>2021-05-12T18:00:00.000+07:00</code>  </p>
+</li>
+<li>
+<p>Bị Phạt <code>70%</code> giá trị của phòng khi hủy phòng từ ngày <code>2021-05-12T18:00:00.000+07:00</code> đến ngày <code>2021-05-13T18:00:00.000+07:00</code>  </p>
+</li>
+</ul>
+<h4 id="vi-du-5-nhieu-hinh-phat">Ví dụ 5: Nhiều hình phạt<a class="headerlink" href="#vi-du-5-nhieu-hinh-phat" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">[{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-10T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-12T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;PERCENT&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VND&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;50%&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;nights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;25000&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="p">}]</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>
+<p>Được hủy miễn phí đến trước ngày <code>2021-05-10T18:00:00.000+07:00</code>  </p>
+</li>
+<li>
+<p>Bị Phạt <code>50%</code> giá trị của phòng khi hủy phòng từ ngày <code>2021-05-10T18:00:00.000+07:00</code> đến ngày <code>2021-05-12T18:00:00.000+07:00</code> kèm theo khoản phí  </p>
+</li>
+<li>
+<p>Bị phạt <code>25000</code> <code>VND</code> tiền phí khi hủy phòng từ ngày <code>2021-05-10T18:00:00.000+07:00</code> đến ngày <code>2021-05-12T18:00:00.000+07:00</code>  </p>
+</li>
+</ul>
+<h4 id="vi-du-6-huy-mien-phi">Ví dụ 6: Hủy miễn phí<a class="headerlink" href="#vi-du-6-huy-mien-phi" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="p">[{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-01T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2021-05-12T18:00:00.000+07:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NIGHTS&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VND&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;nights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w"></span>
+<span class="p">}]</span><span class="w"></span>
+</code></pre></div>
+<ul>
+<li>Được hủy miễn phí đến trước ngày <code>2021-05-12T18:00:00.000+07:00</code>  </li>
+</ul>
+<hr />
+<h2 id="1-api-kiem-tra-kha-nang-huy-phong-va-phi-phat">1. API Kiểm tra khả năng huỷ phòng và phí phạt<a class="headerlink" href="#1-api-kiem-tra-kha-nang-huy-phong-va-phi-phat" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">POST: /api/v3/hotel/check-cancel-penalty</p>
+<p>Trả về thông tin trạng thái khả năng huỷ phòng, và thông tin phí phạt khi huỷ. </p>
+</div>
+<h3 id="request-body">Request Body<a class="headerlink" href="#request-body" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Request Body</summary>
+<ul>
+<li>
+<p>bookingNumber (String, Required)</p>
+<div class="admonition quote">
+<p>Mã dùng tham chiếu đến booking. Mã này là duy nhất.</p>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;bookingNumber&quot;</span><span class="p">:</span><span class="s2">&quot;HDCO2107121213651&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
+<h4 id="code-200">Code 200<a class="headerlink" href="#code-200" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>result (CheckCancelPenaltyResult, Optional)</p>
+<div class="admonition quote">
+<p>Thông tin kết quả trả về </p>
+</div>
+<ul>
+<li>
+<p>status (string, optional) = [&lsquo;ALLOW_CANCELLATION&rsquo;, &lsquo;NOT_ALLOW_CANCELLATION&rsquo;, &lsquo;UNKNOWN&rsquo;]</p>
+<div class="admonition quote">
+<p>Thông tin xác định trạng thái huỷ phòng  </p>
+<ul>
+<li>
+<p><code>ALLOW_CANCELLATION</code>: Chấp nhận huỷ phòng  </p>
+</li>
+<li>
+<p><code>NOT_ALLOW_CANCELLATION</code>: Không chấp nhận huỷ phòng </p>
+</li>
+<li>
+<p><code>UNKNOWN</code>: Không xác định trạng thái, cần được xác định lại  </p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>cancelPenalties (Array[CancelPenalty], optional),</p>
+<div class="admonition quote">
+<p>Thông tin phí phạt khi huỷ phòng. <a href="/dev-guide/api-hotel/api-cancellation/#cac-hinh-thuc-phat">Xem mô tả thêm ở đây</a></p>
+</div>
+</li>
+<li>
+<p>cancelPenaltyTotal (number, optional),</p>
+<div class="admonition quote">
+<p>Thông tin phí phạt khi huỷ phòng </p>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<p>duration (Integer, Optional)</p>
+</li>
+<li>success (Integer, Bool)</li>
+<li>infos (Array[InfosDTO], Optional)</li>
+<li>errors (Array[ErrorsDTO], Optional)</li>
+<li>textMessage (String, Optional)</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;cancelPenalties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;amount&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;currency&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;VND&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;endDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;27/08/2021 11:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;nights&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;percent&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;startDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26/08/2021 11:00&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NIGHTS&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">],</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;cancelPenaltyTotal&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ALLOW_CANCELLATION&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;textMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;infos&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="code-400">Code 400<a class="headerlink" href="#code-400" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request </p>
+</blockquote>
+<h4 id="code-401">Code 401<a class="headerlink" href="#code-401" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403">Code 403<a class="headerlink" href="#code-403" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404">Code 404<a class="headerlink" href="#code-404" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500">Code 500<a class="headerlink" href="#code-500" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503">Code 503<a class="headerlink" href="#code-503" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+<hr />
+<h2 id="2-api-yeu-cau-huy-booking-hotel">2. API yêu cầu huỷ booking hotel<a class="headerlink" href="#2-api-yeu-cau-huy-booking-hotel" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">POST: /api/partner/cancellation</p>
+<p>API gửi yêu cầu huỷ booking đợi trả lời từ nhà cung cấp </p>
+<div class="admonition note">
+<p class="admonition-title">Chú ý</p>
+<p>Yêu cầu bảo mật: Mã hóa dữ liệu và kèm theo chữ ký điện tử</p>
+<ul>
+<li>
+<p>Request: Không yêu cầu phải được mã hóa và kèm theo chữ ký điện tử</p>
+</li>
+<li>
+<p>Response: Một phần dữ liệu của response được yêu cầu phải mã hóa và kèm theo chữ ký điện tử</p>
+</li>
+</ul>
+</div>
+</div>
+<h3 id="request-body_1">Request Body<a class="headerlink" href="#request-body_1" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>key (string, required),</p>
+<div class="admonition quote">
+<p>Key giải mã dữ liệu (đã được mã hóa). <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Tham khảo thêm tại đây</a></p>
+</div>
+</li>
+<li>
+<p>data (string, required),</p>
+<div class="admonition quote">
+<p>Dữ liệu kèm theo chữ ký điện tử (đã được mã hóa). <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Tham khảo thêm tại đây</a></p>
+<p><em>Signature data schema:</em></p>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;cancel_penalty_amount&gt;
+</code></pre></div>
+<p><em>Original data schema:</em>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;cancel_penalty_amount&gt;|&lt;signature&gt;
+</code></pre></div></p>
+<ul>
+<li>
+<p>access_code (String, required)</p>
+<div class="admonition quote">
+<p>Access code do Gotadi cung cấp cho Đối tác.</p>
+</div>
+</li>
+<li>
+<p>bookingNumber (String, required)</p>
+<div class="admonition quote">
+<p>Mã dùng tham chiếu đến booking</p>
+</div>
+</li>
+<li>
+<p>cancel_penalty_amount (String, optional)</p>
+<div class="admonition quote">
+<p>Số tiền phí phạt. Được định dạng 2 chữ số thập phân <code>0.00</code></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="response_1">Response<a class="headerlink" href="#response_1" title="Permanent link">&para;</a></h3>
+<h4 id="code-200_1">Code 200<a class="headerlink" href="#code-200_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>key (String, required)</p>
+<div class="admonition quote">
+<p>Key giải mã dữ liệu (đã được mã hóa). <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Tham khảo thêm tại đây</a></p>
+</div>
+</li>
+<li>
+<p>data (String, required)</p>
+<div class="admonition quote">
+<p>Dữ liệu kèm theo chữ ký điện tử (đã được mã hóa). <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Tham khảo thêm tại đây</a></p>
+<p><em>Signature data schema:</em></p>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;error_code&gt;|&lt;product_type&gt;|&lt;cancellation_status&gt;
+</code></pre></div>
+<p><em>Original data schema:</em>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;error_code&gt;|&lt;product_type&gt;|&lt;cancellation_status&gt;|&lt;signature&gt;
+</code></pre></div></p>
+<ul>
+<li>
+<p>access_code (String, required)</p>
+<div class="admonition quote">
+<p>Access code do Gotadi cung cấp cho Đối tác.</p>
+</div>
+</li>
+<li>
+<p>booking_number (String, required)</p>
+<div class="admonition quote">
+<p>Mã dùng tham chiếu đến booking</p>
+</div>
+</li>
+<li>
+<p>error_code (String, required)</p>
+<div class="admonition quote">
+<p><a href="/dev-guide/#7-ma-loi">Mã lỗi</a> </p>
+</div>
+</li>
+<li>
+<p>product_type (String, optional)</p>
+<div class="admonition quote">
+<p>Loại sản phẩm, có giá trị là <code>AIR</code> hoặc <code>HOTEL</code> tương ứng với loại sản phẩm được mua</p>
+</div>
+</li>
+<li>
+<p>cancellation_status (String, optional)</p>
+<div class="admonition quote">
+<p>Thông tin trạng thái huỷ: </p>
+<ul>
+<li>
+<p><code>CANCEL_UNKNOWN</code> Trạng thái không xác định, cần kiểm tra lại.</p>
+</li>
+<li>
+<p><code>CANCEL_PENALTY_MISMATCH</code> Phí phạt không khớp. Cần gọi lại <a href="/dev-guide/api-hotel/api-cancellation/#1-api-kiem-tra-kha-nang-huy-phong-va-phi-phat">API Kiểm tra khả năng huỷ phòng và phí phạt</a> để lấy thông tin phí phạt sau đó gủi lại yêu cầu huỷ phòng</p>
+</li>
+<li>
+<p><code>CANCEL_WAITING_CONFIRM</code> Gửi yêu cầu huỷ thành công, đợi nhà cung cấp xác nhận </p>
+</li>
+<li>
+<p><code>CANCEL_CONFIRMED</code> Huỷ thành công</p>
+</li>
+<li>
+<p><code>CANCEL_EXPIRED</code> Yêu cầu huỷ quá hạn </p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+</div>
+</div>
+<h4 id="code-400_1">Code 400<a class="headerlink" href="#code-400_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request</p>
+</blockquote>
+<h4 id="code-401_1">Code 401<a class="headerlink" href="#code-401_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403_1">Code 403<a class="headerlink" href="#code-403_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404_1">Code 404<a class="headerlink" href="#code-404_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500_1">Code 500<a class="headerlink" href="#code-500_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503_1">Code 503<a class="headerlink" href="#code-503_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+<h2 id="3-api-kiem-tra-trang-thai-huy-phong">3. API Kiểm tra trạng thái huỷ phòng<a class="headerlink" href="#3-api-kiem-tra-trang-thai-huy-phong" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">POST: /api/partner/cancellation-check</p>
+<p>API kiểm tra trạng thái huỷ phòng </p>
+<div class="admonition note">
+<p class="admonition-title">Chú ý</p>
+<p>Yêu cầu bảo mật: Mã hóa dữ liệu và kèm theo chữ ký điện tử</p>
+<ul>
+<li>
+<p>Request: Không yêu cầu phải được mã hóa và kèm theo chữ ký điện tử</p>
+</li>
+<li>
+<p>Response: Một phần dữ liệu của response được yêu cầu phải mã hóa và kèm theo chữ ký điện tử</p>
+</li>
+</ul>
+</div>
+</div>
+<h3 id="request-body_2">Request Body<a class="headerlink" href="#request-body_2" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>key (string, required),</p>
+<div class="admonition quote">
+<p>Key giải mã dữ liệu (đã được mã hóa). <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Tham khảo thêm tại đây</a></p>
+</div>
+</li>
+<li>
+<p>data (string, required),</p>
+<div class="admonition quote">
+<p>Dữ liệu kèm theo chữ ký điện tử (đã được mã hóa). <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Tham khảo thêm tại đây</a></p>
+<p><em>Signature data schema:</em></p>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;&gt;
+</code></pre></div>
+<p><em>Original data schema:</em>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;signature&gt;
+</code></pre></div></p>
+<ul>
+<li>
+<p>access_code (String, required)</p>
+<div class="admonition quote">
+<p>Access code do Gotadi cung cấp cho Đối tác.</p>
+</div>
+</li>
+<li>
+<p>bookingNumber (String, required)</p>
+<div class="admonition quote">
+<p>Mã dùng tham chiếu đến booking</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="response_2">Response<a class="headerlink" href="#response_2" title="Permanent link">&para;</a></h3>
+<h4 id="code-200_2">Code 200<a class="headerlink" href="#code-200_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>key (String, required)</p>
+<div class="admonition quote">
+<p>Key giải mã dữ liệu (đã được mã hóa). <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Tham khảo thêm tại đây</a></p>
+</div>
+</li>
+<li>
+<p>data (String, required)</p>
+<div class="admonition quote">
+<p>Dữ liệu kèm theo chữ ký điện tử (đã được mã hóa). <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Tham khảo thêm tại đây</a></p>
+<p><em>Signature data schema:</em></p>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;error_code&gt;|&lt;product_type&gt;|&lt;cancellation_status&gt;|&lt;cancel_penalty_amount&gt;
+</code></pre></div>
+<p><em>Original data schema:</em>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;booking_number&gt;|&lt;error_code&gt;|&lt;product_type&gt;|&lt;cancellation_status&gt;|&lt;cancellation_feee&gt;|&lt;signature&gt;
+</code></pre></div></p>
+<ul>
+<li>
+<p>access_code (String, required)</p>
+<div class="admonition quote">
+<p>Access code do Gotadi cung cấp cho Đối tác.</p>
+</div>
+</li>
+<li>
+<p>booking_number (String, required)</p>
+<div class="admonition quote">
+<p>Mã dùng tham chiếu đến booking</p>
+</div>
+</li>
+<li>
+<p>error_code (String, required)</p>
+<div class="admonition quote">
+<p><a href="/dev-guide/#7-ma-loi">Mã lỗi</a> </p>
+</div>
+</li>
+<li>
+<p>product_type (String, optional)</p>
+<div class="admonition quote">
+<p>Loại sản phẩm, có giá trị là <code>AIR</code> hoặc <code>HOTEL</code> tương ứng với loại sản phẩm được mua</p>
+</div>
+</li>
+<li>
+<p>cancellation_status (String, optional)</p>
+<div class="admonition quote">
+<p>Thông tin trạng thái huỷ: </p>
+<ul>
+<li>
+<p><code>CANCEL_UNKNOWN</code> Trạng thái không xác định, cần kiểm tra lại.</p>
+</li>
+<li>
+<p><code>CANCEL_PENALTY_MISMATCH</code> Phí phạt không khớp. Cần gọi lại <a href="/dev-guide/api-hotel/api-cancellation/#1-api-kiem-tra-kha-nang-huy-phong-va-phi-phat">API Kiểm tra khả năng huỷ phòng và phí phạt</a> để lấy thông tin phí phạt sau đó gủi lại yêu cầu huỷ phòng</p>
+</li>
+<li>
+<p><code>CANCEL_WAITING_CONFIRM</code> Gửi yêu cầu huỷ thành công, đợi nhà cung cấp xác nhận </p>
+</li>
+<li>
+<p><code>CANCEL_CONFIRMED</code> Huỷ thành công</p>
+</li>
+<li>
+<p><code>CANCEL_EXPIRED</code> Yêu cầu huỷ quá hạn </p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>product_type (String, optional)</p>
+<div class="admonition quote">
+<p>Số tiền phí huỷ. Được định dạng 2 chữ số thập phân <code>0.00</code></p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+</div>
+</div>
+<h4 id="code-400_2">Code 400<a class="headerlink" href="#code-400_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request</p>
+</blockquote>
+<h4 id="code-401_2">Code 401<a class="headerlink" href="#code-401_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403_2">Code 403<a class="headerlink" href="#code-403_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404_2">Code 404<a class="headerlink" href="#code-404_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500_2">Code 500<a class="headerlink" href="#code-500_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503_2">Code 503<a class="headerlink" href="#code-503_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../api-booking/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API Booking" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              API Booking
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../api-flight/api-searching/" class="md-footer__link md-footer__link--next" aria-label="Next: API Searching" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              API Searching
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      
+    
+  </body>
+</html>

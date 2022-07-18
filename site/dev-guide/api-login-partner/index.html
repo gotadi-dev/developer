@@ -1,0 +1,2584 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+    
+    
+      
+        <title>API Login B2B2C - Gotadi Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e411adfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.cc9b2e1e.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i%7CSource+Code+Pro:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Open Sans";--md-code-font:"Source Code Pro"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#document-api-login" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Gotadi Docs" class="md-header__button md-logo" aria-label="Gotadi Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gotadi Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Login B2B2C
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Gotadi Docs" class="md-nav__button md-logo" aria-label="Gotadi Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Gotadi Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Developer Guide (VI)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Guide (VI)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide (VI)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        Tài liệu tích hợp B2B2C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../affiliate/" class="md-nav__link">
+        Affiliate
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-login/" class="md-nav__link">
+        API Login
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          API Login B2B2C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        API Login B2B2C
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-api-ang-nhap" class="md-nav__link">
+    1. API Đăng nhập
+  </a>
+  
+    <nav class="md-nav" aria-label="1. API Đăng nhập">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-tao-tai-khoan-subagency" class="md-nav__link">
+    2. API Tạo Tài Khoản SubAgency
+  </a>
+  
+    <nav class="md-nav" aria-label="2. API Tạo Tài Khoản SubAgency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_1" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_1" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_1" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_1" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_1" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_1" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_1" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api-lay-thong-tin-subagency" class="md-nav__link">
+    3. API lấy thông tin SubAgency
+  </a>
+  
+    <nav class="md-nav" aria-label="3. API lấy thông tin SubAgency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_2" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_2" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_2" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_2" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_2" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_2" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_2" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-api-lay-thong-tin-thanh-pho-quoc-gia" class="md-nav__link">
+    4. API lấy thông tin thành phố / quốc gia
+  </a>
+  
+    <nav class="md-nav" aria-label="4. API lấy thông tin thành phố / quốc gia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_2" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_3" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_3" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_3" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_3" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_3" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_3" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_3" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_3" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_5" type="checkbox" id="__nav_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_5">
+          API Hotel
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Hotel" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          API Hotel
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-hotel/api-searching/" class="md-nav__link">
+        API Searching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-hotel/api-booking/" class="md-nav__link">
+        API Booking
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-hotel/api-cancellation/" class="md-nav__link">
+        API Cancellation
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_6" type="checkbox" id="__nav_2_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_6">
+          API Flight
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="API Flight" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_6">
+          <span class="md-nav__icon md-icon"></span>
+          API Flight
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-flight/api-searching/" class="md-nav__link">
+        API Searching
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-flight/api-booking/" class="md-nav__link">
+        API Booking
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-payment/" class="md-nav__link">
+        API Payment
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api-manage-booking/" class="md-nav__link">
+        API Manage Booking
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Developer Guide (EN)
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Developer Guide (EN)" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Developer Guide (EN)
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_1">
+          Agent partner
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Agent partner" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Agent partner
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-partner/integration-flow/" class="md-nav__link">
+        Integration flow
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        About
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-api-ang-nhap" class="md-nav__link">
+    1. API Đăng nhập
+  </a>
+  
+    <nav class="md-nav" aria-label="1. API Đăng nhập">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-api-tao-tai-khoan-subagency" class="md-nav__link">
+    2. API Tạo Tài Khoản SubAgency
+  </a>
+  
+    <nav class="md-nav" aria-label="2. API Tạo Tài Khoản SubAgency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_1" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_1" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_1" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_1" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_1" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_1" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_1" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_1" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_1" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-api-lay-thong-tin-subagency" class="md-nav__link">
+    3. API lấy thông tin SubAgency
+  </a>
+  
+    <nav class="md-nav" aria-label="3. API lấy thông tin SubAgency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parameter" class="md-nav__link">
+    Parameter
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_2" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_2" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_2" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_2" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_2" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_2" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_2" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_2" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-api-lay-thong-tin-thanh-pho-quoc-gia" class="md-nav__link">
+    4. API lấy thông tin thành phố / quốc gia
+  </a>
+  
+    <nav class="md-nav" aria-label="4. API lấy thông tin thành phố / quốc gia">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request-body_2" class="md-nav__link">
+    Request Body
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response_3" class="md-nav__link">
+    Response
+  </a>
+  
+    <nav class="md-nav" aria-label="Response">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#code-200_3" class="md-nav__link">
+    Code 200
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-400_3" class="md-nav__link">
+    Code 400
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-401_3" class="md-nav__link">
+    Code 401
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-403_3" class="md-nav__link">
+    Code 403
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-404_3" class="md-nav__link">
+    Code 404
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-500_3" class="md-nav__link">
+    Code 500
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-503_3" class="md-nav__link">
+    Code 503
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="document-api-login">Document API Login<a class="headerlink" href="#document-api-login" title="Permanent link">&para;</a></h1>
+<hr />
+<h2 id="1-api-ang-nhap">1. API Đăng nhập<a class="headerlink" href="#1-api-ang-nhap" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">POST: /api/partner/login</p>
+<p>Khởi tạo phiên làm việc mới cho người dùng B2B2C</p>
+<div class="admonition note">
+<p class="admonition-title">Chú ý</p>
+<p>Yêu cầu bảo mật: Mã hóa dữ liệu và kèm theo chữ ký điện tử</p>
+</div>
+</div>
+<h3 id="request-body">Request Body<a class="headerlink" href="#request-body" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>key (string, required),</p>
+<div class="admonition quote">
+<p>Key giải mã dữ liệu (đã được mã hóa). Cách thành lập tham khảo mục: <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Mã hóa dữ liệu truyền và xác thực chữ ký điện tử</a></p>
+</div>
+</li>
+<li>
+<p>data (string, required),</p>
+<div class="admonition quote">
+<p>Dữ liệu kèm theo chữ ký điện tử (đã được mã hóa). Cách giải mã tham khảo mục: <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Mã hóa dữ liệu truyền và xác thực chữ ký điện tử</a></p>
+<p><em>Signature data schema:</em></p>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;user_id&gt;
+</code></pre></div>
+<p><em>Original data schema:</em>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;user_id&gt;|&lt;signature&gt;
+</code></pre></div></p>
+<ul>
+<li>
+<p>access_code (String, required)</p>
+<div class="admonition quote">
+<p>Access code do Gotadi cung cấp cho Đối tác.</p>
+</div>
+</li>
+<li>
+<p>user_id (String, required)</p>
+<div class="admonition quote">
+<p>Mã định danh người dùng trên hệ thống của Đối tác.</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="response">Response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h3>
+<h4 id="code-200">Code 200<a class="headerlink" href="#code-200" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>key (String, required)</p>
+<div class="admonition quote">
+<p>Key giải mã dữ liệu (đã được mã hóa). Cách giải mã tham khảo mục: <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Mã hóa dữ liệu truyền và xác thực chữ ký điện tử</a></p>
+</div>
+</li>
+<li>
+<p>data (String, required)</p>
+<div class="admonition quote">
+<p>Dữ liệu kèm theo chữ ký điện tử (đã được mã hóa). Cách giải mã tham khảo mục: <a href="/dev-guide/#3-ma-hoa-du-lieu-truyen-va-xac-thuc-chu-ky-ien-tu">Mã hóa dữ liệu truyền và xác thực chữ ký điện tử</a></p>
+<p><em>Signature data schema:</em></p>
+<div class="highlight"><pre><span></span><code>&lt;access_code&gt;|&lt;error_code&gt;
+</code></pre></div>
+<p><em>Original data schema:</em>
+<div class="highlight"><pre><span></span><code>&lt;jwt_token&gt;|&lt;error_code&gt;|&lt;signature&gt;
+</code></pre></div></p>
+<ul>
+<li>
+<p>access_code (String, required)</p>
+<div class="admonition quote">
+<p>Access code do Gotadi cung cấp cho Đối tác.</p>
+</div>
+</li>
+<li>
+<p>error_code (String, required)</p>
+<div class="admonition quote">
+<p><a href="/dev-guide/#7-ma-loi">Mã lỗi</a></p>
+</div>
+</li>
+<li>
+<p>jwt_token (String, required)</p>
+<div class="admonition quote">
+<p>token dùng để gọi api của gotadi</p>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;key&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="code-400">Code 400<a class="headerlink" href="#code-400" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request</p>
+</blockquote>
+<h4 id="code-401">Code 401<a class="headerlink" href="#code-401" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403">Code 403<a class="headerlink" href="#code-403" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404">Code 404<a class="headerlink" href="#code-404" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500">Code 500<a class="headerlink" href="#code-500" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503">Code 503<a class="headerlink" href="#code-503" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+<h2 id="2-api-tao-tai-khoan-subagency">2. API Tạo Tài Khoản SubAgency<a class="headerlink" href="#2-api-tao-tai-khoan-subagency" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">POST: /api/partner/create-sub-agency</p>
+<p>Tạo tài khoản mới cho người dùng B2B2C nếu tài khoản khi gọi API login trả về  Error_Code = 10</p>
+</div>
+<h3 id="request-body_1">Request Body<a class="headerlink" href="#request-body_1" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>userId (string, required),</p>
+<div class="admonition quote">
+<p>Mã định danh người dùng trên hệ thống của Đối tác.</p>
+</div>
+</li>
+<li>
+<p>address (string, required),</p>
+<div class="admonition quote">
+<p>Địa chỉ khách hàng</p>
+</div>
+</li>
+<li>
+<p>email (string, required),</p>
+<div class="admonition quote">
+<p>Email khách hàng</p>
+</div>
+</li>
+<li>
+<p>city (string, required),</p>
+<div class="admonition quote">
+<p>Thành phố</p>
+</div>
+</li>
+<li>
+<p>cityCode (string, required),</p>
+<div class="admonition quote">
+<p>Mã thành phố</p>
+</div>
+</li>
+<li>
+<p>country (string, required),</p>
+<div class="admonition quote">
+<p>Quốc gia</p>
+</div>
+</li>
+<li>
+<p>countryCode (string, required),</p>
+<div class="admonition quote">
+<p>Mã quốc gia</p>
+</div>
+</li>
+<li>
+<p>firstName (string, required),</p>
+<div class="admonition quote">
+<p>Tên khách hàng</p>
+</div>
+</li>
+<li>
+<p>lastName (string, required),</p>
+<div class="admonition quote">
+<p>Họ khách hàng</p>
+</div>
+</li>
+<li>
+<p>phoneNumber (string, required),</p>
+<div class="admonition quote">
+<p>Số điện thoại khách hàng</p>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;userId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vĩnh Long&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cityCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vn_16d7_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vietnam&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;countryCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;firstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;lastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;phoneNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h3 id="response_1">Response<a class="headerlink" href="#response_1" title="Permanent link">&para;</a></h3>
+<h4 id="code-200_1">Code 200<a class="headerlink" href="#code-200_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>duration (Integer, Optional),</li>
+<li>errors (Array[Error], Optional),</li>
+<li>infos (Array[Info], Optional),</li>
+<li>success (Boolean, Optional),</li>
+<li>textMessage (String, Optional)</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">46854</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;textMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;infos&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="code-400_1">Code 400<a class="headerlink" href="#code-400_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request</p>
+</blockquote>
+<h4 id="code-401_1">Code 401<a class="headerlink" href="#code-401_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403_1">Code 403<a class="headerlink" href="#code-403_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404_1">Code 404<a class="headerlink" href="#code-404_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500_1">Code 500<a class="headerlink" href="#code-500_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503_1">Code 503<a class="headerlink" href="#code-503_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+<h2 id="3-api-lay-thong-tin-subagency">3. API lấy thông tin SubAgency<a class="headerlink" href="#3-api-lay-thong-tin-subagency" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title">POST: /api/partner/sub-agency</p>
+<p>lấy thông tin subagency theo userId</p>
+</div>
+<h3 id="parameter">Parameter<a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Paramter</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Parameters</summary>
+<ul>
+<li>
+<p>userId <code>query</code> (String, Required)</p>
+<div class="admonition quote">
+<p>Mã định danh của người dùng</p>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">Example</label><div class="tabbed-content">
+<p>?userId=<code>b286b297-a22e-41c6-a776-49a6891c57b3</code></p>
+</div>
+</div>
+<h3 id="response_2">Response<a class="headerlink" href="#response_2" title="Permanent link">&para;</a></h3>
+<h4 id="code-200_2">Code 200<a class="headerlink" href="#code-200_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>
+<p>result</p>
+<ul>
+<li>
+<p>SubAgencyInfoDTO:</p>
+<ul>
+<li>
+<p>userId (string, required),</p>
+<div class="admonition quote">
+<p>Mã định danh người dùng trên hệ thống của Đối tác.</p>
+</div>
+</li>
+<li>
+<p>address (string, required),</p>
+<div class="admonition quote">
+<p>Địa chỉ khách hàng</p>
+</div>
+</li>
+<li>
+<p>email (string, required),</p>
+<div class="admonition quote">
+<p>Email khách hàng</p>
+</div>
+</li>
+<li>
+<p>city (string, required),</p>
+<div class="admonition quote">
+<p>Thành phố</p>
+</div>
+</li>
+<li>
+<p>cityCode (string, required),</p>
+<div class="admonition quote">
+<p>Mã thành phố</p>
+</div>
+</li>
+<li>
+<p>country (string, required),</p>
+<div class="admonition quote">
+<p>Quốc gia</p>
+</div>
+</li>
+<li>
+<p>countryCode (string, required),</p>
+<div class="admonition quote">
+<p>Mã quốc gia</p>
+</div>
+</li>
+<li>
+<p>firstName (string, required),</p>
+<div class="admonition quote">
+<p>Tên khách hàng</p>
+</div>
+</li>
+<li>
+<p>lastName (string, required),</p>
+<div class="admonition quote">
+<p>Họ khách hàng</p>
+</div>
+</li>
+<li>
+<p>phoneNumber (string, required),</p>
+<div class="admonition quote">
+<p>Số điện thoại khách hàng</p>
+</div>
+</li>
+<li>
+<p>agencyNumber (string, required) </p>
+<div class="admonition quote">
+<p>Mã agency bên hệ thống gotadi</p>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>duration (Integer, Optional),</p>
+</li>
+<li>errors (Array[Error], Optional),</li>
+<li>infos (Array[Info], Optional),</li>
+<li>success (Boolean, Optional),</li>
+<li>textMessage (String, Optional)</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;result&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;userId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;b286b297-a22e-41c6-a776-49a6891c57b3&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hà Nội&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;namkh20008@fpt.com.vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hà Nội&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;cityCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vn_163b_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Vietnam&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;countryCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;firstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Nam&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;lastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Kim&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;phoneNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0836202008&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;agencyNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;GOB2B2BHN0000027278&quot;</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;textMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;errors&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;infos&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;success&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="code-400_2">Code 400<a class="headerlink" href="#code-400_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request</p>
+</blockquote>
+<h4 id="code-401_2">Code 401<a class="headerlink" href="#code-401_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403_2">Code 403<a class="headerlink" href="#code-403_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404_2">Code 404<a class="headerlink" href="#code-404_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500_2">Code 500<a class="headerlink" href="#code-500_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503_2">Code 503<a class="headerlink" href="#code-503_2" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+<h2 id="4-api-lay-thong-tin-thanh-pho-quoc-gia">4. API lấy thông tin thành phố / quốc gia<a class="headerlink" href="#4-api-lay-thong-tin-thanh-pho-quoc-gia" title="Permanent link">&para;</a></h2>
+<p>!!! info &ldquo;GET: /api/_search/lookups
+    Lấy thông tin thành phố / quốc gia</p>
+<h3 id="request-body_2">Request Body<a class="headerlink" href="#request-body_2" title="Permanent link">&para;</a></h3>
+<div class="tabbed-set" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><label for="__tabbed_7_1">Parameter</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Parameter</summary>
+<ul>
+<li>
+<p>domain_name (string, required),</p>
+<div class="admonition quote">
+<p>Miền đối tượng</p>
+<ul>
+<li>destination</li>
+</ul>
+</div>
+</li>
+<li>
+<p>object_name (string, required),</p>
+<div class="admonition quote">
+<p>Tên đối tượng</p>
+</div>
+</li>
+<li>
+<p>lookupType (string, required),</p>
+<div class="admonition quote">
+<p>Khu vực tìm kiếm</p>
+</div>
+</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><label for="__tabbed_7_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>?domain_name=destination&amp;object_name=region&amp;lookupType=vn&amp;page=0&amp;size=1000
+</code></pre></div>
+</div>
+</div>
+<h3 id="response_3">Response<a class="headerlink" href="#response_3" title="Permanent link">&para;</a></h3>
+<h4 id="code-200_3">Code 200<a class="headerlink" href="#code-200_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>OK</p>
+</blockquote>
+<div class="tabbed-set" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><label for="__tabbed_8_1">Model</label><div class="tabbed-content">
+<details class="example" open="open">
+<summary>Model</summary>
+<ul>
+<li>id (Integer),</li>
+<li>domainName (String),</li>
+<li>objectName (String),</li>
+<li>lookupType (String),</li>
+<li>lookupValue (String)</li>
+<li>description (String)</li>
+<li>sortOrder (Integer)</li>
+<li>lang (String)</li>
+<li>lookupCode (String)</li>
+</ul>
+</details>
+</div>
+<input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><label for="__tabbed_8_2">Example</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13691</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d9_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;An Giang&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1791</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d9_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;AG&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13692</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e6_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bắc Giang&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1792</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e6_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BG&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13693</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e4_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bắc Kạn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1793</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e4_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BK&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13694</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16dc_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bạc Liêu&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1794</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16dc_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BL&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13695</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_15c6_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bắc Ninh&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1795</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_15c6_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BN&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13696</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1640_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bà Rịa - Vũng Tàu&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1796</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1640_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BR&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13697</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d6_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bến Tre&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1797</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d6_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13698</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16f2_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bình Định&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1798</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16f2_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BI&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13699</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1584_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bình Dương&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1799</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1584_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BD&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13700</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d0_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bình Phước&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1800</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d0_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BP&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13701</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1580_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Bình Thuận&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1801</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1580_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;BH&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13702</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16dd_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Cà Mau&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1802</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16dd_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;CM&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13703</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_163d_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Cần Thơ&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1803</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_163d_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;CT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13704</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e2_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Cao Bằng&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1804</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e2_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;CB&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13705</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16ce_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Đắk Lắk&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1805</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16ce_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;DL&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13706</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16cf_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Đắk Nông&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1806</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16cf_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;DK&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13707</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_163f_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Đà Nẵng&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1807</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_163f_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;DN&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13708</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e9_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Điện Biên&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1808</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e9_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;DB&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13709</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d2_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Đồng Nai&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1809</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d2_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;DI&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13710</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d8_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Đồng Tháp&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1810</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d8_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;DT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13711</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16ef_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Gia Lai&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1811</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16ef_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;GL&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13712</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e1_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hà Giang&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1812</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e1_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HA&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13713</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16ea_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hải Dương&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1813</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16ea_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HD&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13714</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1647_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hải Phòng&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1814</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1647_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HP&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13715</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16cb_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hà Nam&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1815</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16cb_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HM&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13716</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_163b_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hà Nội&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1816</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_163b_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HN&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13717</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16df_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hà Tĩnh&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1817</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16df_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13718</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16da_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hậu Giang&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1818</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16da_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HG&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13719</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e0_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hòa Bình&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1819</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e0_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HB&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13720</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_163c_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;HCM&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1820</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_163c_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;SG&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13721</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16c9_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Hưng Yên&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1821</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16c9_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;HY&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13722</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1585_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Khánh Hòa&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1822</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1585_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;KH&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13723</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1581_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Kiên Giang&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1823</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1581_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;KG&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13724</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16f0_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Kon Tum&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1824</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16f0_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;KT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13725</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16ec_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Lai Châu&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1825</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16ec_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;LH&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13726</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_164a_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Lâm Đồng&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1826</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_164a_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;LD&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13727</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e5_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Lạng Sơn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1827</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e5_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;LS&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13728</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1646_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Lào Cai&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1828</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1646_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;LC&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13729</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d3_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Long An&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1829</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d3_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;LA&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13730</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16cc_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Nam Định&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1830</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16cc_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;ND&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13731</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16de_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Nghệ An&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1831</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16de_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;NA&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13732</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1648_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Ninh Bình&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1832</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1648_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;NB&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13733</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16f1_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Ninh Thuận&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1833</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16f1_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;NT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13734</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_15ef_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Phú Quốc&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1834</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_15ef_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;PQ&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13735</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e8_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Phú Thọ&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1835</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e8_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;PT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13736</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_1649_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Phú Yên&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1836</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_1649_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;PY&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13737</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16f6_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Quảng Bình&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1837</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16f6_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;QB&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13738</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16f4_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Quảng Nam&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1838</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16f4_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;QN&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13739</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16f3_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Quảng Ngãi&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1839</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16f3_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;QG&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13740</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_157f_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Quảng Ninh&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1840</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_157f_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;QH&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13741</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16f5_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Quảng Trị&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1841</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16f5_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;QT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13742</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16db_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Sóc Trăng&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1842</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16db_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;ST&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13743</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16ed_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Sơn La&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1843</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16ed_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;SL&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13744</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d1_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Tây Ninh&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1844</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d1_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;TN&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13745</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16ca_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Thái Bình&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1845</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16ca_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;TB&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13746</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e3_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Thái Nguyên&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1846</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e3_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;TE&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13747</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d4_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Thanh Hóa&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1847</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d4_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;TH&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13748</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_163e_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Thừa Thiên Huế&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1848</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_163e_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;TT&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13749</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d5_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Tiền Giang&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1849</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d5_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;TG&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13750</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16cd_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Trà Vinh&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1850</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16cd_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;TV&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13751</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16e7_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Tuyên Quang&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1851</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16e7_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;TQ&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13752</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16d7_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Vĩnh Long&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1852</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16d7_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;VL&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13753</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16eb_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Vĩnh Phúc&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1853</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16eb_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;VP&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">13754</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;domainName&quot;</span><span class="p">:</span><span class="s2">&quot;destination&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;objectName&quot;</span><span class="p">:</span><span class="s2">&quot;region&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupType&quot;</span><span class="p">:</span><span class="s2">&quot;vn&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupValue&quot;</span><span class="p">:</span><span class="s2">&quot;vn_16ee_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;Yên Bái&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;sortOrder&quot;</span><span class="p">:</span><span class="mi">1854</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lang&quot;</span><span class="p">:</span><span class="s2">&quot;destination.region.vn_16ee_&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lookupCode&quot;</span><span class="p">:</span><span class="s2">&quot;YB&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
+</code></pre></div>
+</div>
+</div>
+<h4 id="code-400_3">Code 400<a class="headerlink" href="#code-400_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Bad Request</p>
+</blockquote>
+<h4 id="code-401_3">Code 401<a class="headerlink" href="#code-401_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unauthorized</p>
+</blockquote>
+<h4 id="code-403_3">Code 403<a class="headerlink" href="#code-403_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Forbidden</p>
+</blockquote>
+<h4 id="code-404_3">Code 404<a class="headerlink" href="#code-404_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Not Found</p>
+</blockquote>
+<h4 id="code-500_3">Code 500<a class="headerlink" href="#code-500_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Unknown Internal Error</p>
+</blockquote>
+<h4 id="code-503_3">Code 503<a class="headerlink" href="#code-503_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Service Unavailable</p>
+</blockquote>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../api-login/" class="md-footer__link md-footer__link--prev" aria-label="Previous: API Login" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              API Login
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../api-hotel/api-searching/" class="md-footer__link md-footer__link--next" aria-label="Next: API Searching" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              API Searching
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      
+    
+  </body>
+</html>

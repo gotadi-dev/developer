@@ -1,0 +1,16 @@
+.md-typeset {
+    font-size: .62rem;
+    line-height: normal;
+}
+
+.md-nav {
+    font-size: .63rem;
+}
+
+:root > * {
+    --md-code-fg-color: #880000;
+}
+  
+.admonition.quote {
+    color: #5c5c5c;
+}

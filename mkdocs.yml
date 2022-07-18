@@ -1,0 +1,68 @@
+site_name: Gotadi Docs
+nav:
+    - Home: index.md
+    - Developer Guide (VI):
+        - Tài liệu tích hợp B2B2C: dev-guide/index.md
+        - Đối tác CA:
+              - Qui trình tích hợp: dev-guide/agent-partner/integration-process.md
+              - API Chứng thực: dev-guide/agent-partner/authentication-api.md
+        - Affiliate: dev-guide/affiliate.md
+        - API Login: dev-guide/api-login.md
+        - API Login B2B2C: dev-guide/api-login-partner.md
+        - API Hotel: 
+            - API Searching: dev-guide/api-hotel/api-searching.md
+            - API Booking: dev-guide/api-hotel/api-booking.md
+            - API Cancellation: dev-guide/api-hotel/api-cancellation.md
+        - API Flight:
+            - API Searching: dev-guide/api-flight/api-searching.md
+            - API Booking: dev-guide/api-flight/api-booking.md
+        - API Payment: dev-guide/api-payment.md
+        - API Manage Booking: dev-guide/api-manage-booking.md
+    - Developer Guide (EN):
+          - Agency partner:
+                - Integration process: dev-guide-en/agency-partner/integration-process.md
+                - Technical documentation:
+                    - Overview: dev-guide-en/agency-partner/integration-documentation.md
+                    - APIs for Login: dev-guide-en/agency-partner/api-login.md
+                    - APIs for Flight:
+                        - APIs for Search: dev-guide-en/agency-partner/flight/api-searching.md
+                        - APIs for Book: dev-guide-en/agency-partner/flight/api-booking.md
+                    - APIs for Payment: dev-guide-en/agency-partner/api-payment.md
+
+    - About: about.md
+theme: 
+    name: material
+    font:
+        text: Open Sans
+        code: Source Code Pro
+markdown_extensions:
+    - smarty
+    - toc:
+        permalink: True
+    - admonition
+    - abbr
+    - def_list
+    - attr_list
+    - meta
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.snippets
+    - pymdownx.details
+    - pymdownx.superfences
+    - pymdownx.highlight
+    - pymdownx.tabbed
+    - pymdownx.smartsymbols
+    - pymdownx.caret
+    - pymdownx.mark
+    - pymdownx.tilde
+    - pymdownx.critic
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.tasklist:
+        custom_checkbox: true
+        clickable_checkbox: true
+extra_css:
+  - stylesheets/extra.css
